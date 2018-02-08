@@ -1,0 +1,19 @@
+*** ./smali/com/android/server/policy/PhoneWindowManager.smali	2018-02-09 01:19:59.550763255 +0530
+--- /root/prithvi/patchrom/device/temp/new_smali/services.jar.out/./smali/com/android/server/policy/PhoneWindowManager.smali	2018-02-09 01:11:31.568633394 +0530
+***************
+*** 463,469 ****
+  
+  .field mLidState:I
+  
+! .field private final mLock:Ljava/lang/Object;
+  
+  .field mLockScreenTimeout:I
+  
+--- 463,469 ----
+  
+  .field mLidState:I
+  
+! .field final mLock:Ljava/lang/Object;
+  
+  .field mLockScreenTimeout:I
+  
