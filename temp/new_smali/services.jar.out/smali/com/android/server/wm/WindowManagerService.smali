@@ -708,9 +708,9 @@
 
     iput-object v7, p0, Lcom/android/server/wm/WindowManagerService;->mCurrentProfileIds:[I
 
-    new-instance v7, Lcom/android/server/policy/MiuiPhoneWindowManager;
+    new-instance v7, Lcom/android/server/policy/PhoneWindowManager;
 
-    invoke-direct {v7}, Lcom/android/server/policy/MiuiPhoneWindowManager;-><init>()V
+    invoke-direct {v7}, Lcom/android/server/policy/PhoneWindowManager;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 

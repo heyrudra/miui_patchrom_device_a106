@@ -1,0 +1,25 @@
+*** UserManagerService.smali	2018-02-09 22:28:45.890116663 +0530
+--- UserManagerService.smali	2018-02-09 22:18:22.828616277 +0530
+***************
+*** 969,975 ****
+  
+      :cond_7
+      :try_start_a
+!     invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/UserManagerService;->getNextAvailableIdLocked()I
+  
+      move-result v19
+  
+--- 969,981 ----
+  
+      :cond_7
+      :try_start_a
+!     move-object/from16 v0, p0
+! 
+!     move/from16 v1, p2
+! 
+!     const/4 v2, 0x0
+! 
+!     invoke-direct {v0, v1, v2}, Lcom/android/server/pm/UserManagerService;->checkAndGetNewUserId(IZ)I
+  
+      move-result v19
+  

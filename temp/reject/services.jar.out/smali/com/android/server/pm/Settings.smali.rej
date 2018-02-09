@@ -1,0 +1,39 @@
+*** Settings.smali	2018-02-09 22:28:45.366118766 +0530
+--- Settings.smali	2018-02-09 22:18:22.384618057 +0530
+***************
+*** 8800,8805 ****
+  
+      if-eqz v0, :cond_0
+  
+      iget v0, v7, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
+  
+      and-int/lit8 v0, v0, 0x1
+--- 8800,8811 ----
+  
+      if-eqz v0, :cond_0
+  
++     invoke-static {v7, p3}, Lcom/android/server/pm/SettingsInjector;->checkXSpaceApp(Lcom/android/server/pm/PackageSetting;I)Z
++ 
++     move-result v0
++ 
++     if-nez v0, :cond_miui_0
++ 
+      iget v0, v7, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
+  
+      and-int/lit8 v0, v0, 0x1
+***************
+*** 8811,8816 ****
+      :goto_1
+      invoke-virtual {v7, v0, p3}, Lcom/android/server/pm/PackageSetting;->setInstalled(ZI)V
+  
+      iget-object v1, v7, Lcom/android/server/pm/PackageSetting;->volumeUuid:Ljava/lang/String;
+  
+      iget-object v2, v7, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+--- 8817,8823 ----
+      :goto_1
+      invoke-virtual {v7, v0, p3}, Lcom/android/server/pm/PackageSetting;->setInstalled(ZI)V
+  
++     :cond_miui_0
+      iget-object v1, v7, Lcom/android/server/pm/PackageSetting;->volumeUuid:Ljava/lang/String;
+  
+      iget-object v2, v7, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;

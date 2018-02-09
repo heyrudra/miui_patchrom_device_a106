@@ -1,0 +1,29 @@
+*** ./smali/android/app/Application.smali	2018-02-09 22:30:01.205814426 +0530
+--- /root/prithvi/patchrom/device/temp/new_smali/framework.jar.out/./smali/android/app/Application.smali	2018-02-09 22:19:34.008330809 +0530
+***************
+*** 526,534 ****
+  .end method
+  
+  .method public onCreate()V
+!     .locals 0
+  
+      .prologue
+      return-void
+  .end method
+  
+--- 526,540 ----
+  .end method
+  
+  .method public onCreate()V
+!     .locals 1
+  
+      .prologue
++     invoke-static {}, Lcom/miui/whetstone/app/WhetstoneAppManager;->getInstance()Lcom/miui/whetstone/app/WhetstoneAppManager;
++ 
++     move-result-object v0
++ 
++     invoke-virtual {v0, p0}, Lcom/miui/whetstone/app/WhetstoneAppManager;->attach(Landroid/content/Context;)V
++ 
+      return-void
+  .end method
+  

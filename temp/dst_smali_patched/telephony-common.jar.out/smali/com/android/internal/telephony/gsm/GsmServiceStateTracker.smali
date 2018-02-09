@@ -10998,7 +10998,9 @@
 
     new-instance v12, Landroid/content/Intent;
 
-    const-string v1, "android.provider.Telephony.SPN_STRINGS_UPDATED"
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/ServiceStateTrackerInjector;->getSpnUpdateActionName(Lcom/android/internal/telephony/ServiceStateTracker;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v12, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

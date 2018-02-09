@@ -1,0 +1,40 @@
+*** GsmServiceStateTracker.smali	2018-02-09 22:28:16.066236341 +0530
+--- GsmServiceStateTracker.smali	2018-02-09 22:17:54.724728978 +0530
+***************
+*** 9894,9899 ****
+  
+      .local v6, "spn":Ljava/lang/String;
+      :goto_3
+      move-object v7, v6
+  
+      .local v7, "dataSpn":Ljava/lang/String;
+--- 9894,9903 ----
+  
+      .local v6, "spn":Ljava/lang/String;
+      :goto_3
++     invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/ServiceStateTrackerInjector;->getSpn(Lcom/android/internal/telephony/ServiceStateTracker;)Ljava/lang/String;
++ 
++     move-result-object v6
++ 
+      move-object v7, v6
+  
+      .local v7, "dataSpn":Ljava/lang/String;
+***************
+*** 10324,10329 ****
+  
+      move-result-object v4
+  
+      invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+  
+      move-result v1
+--- 10330,10339 ----
+  
+      move-result-object v4
+  
++     invoke-static/range {p0 .. p0}, Lcom/android/internal/telephony/ServiceStateTrackerInjector;->getPlmn(Lcom/android/internal/telephony/ServiceStateTracker;)Ljava/lang/String;
++ 
++     move-result-object v4
++ 
+      invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+  
+      move-result v1

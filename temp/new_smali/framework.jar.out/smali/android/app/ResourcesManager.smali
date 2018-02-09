@@ -986,14 +986,14 @@
 
     :cond_b
     :goto_7
-    new-instance v16, Landroid/content/res/MiuiResources;
+    new-instance v16, Landroid/content/res/Resources;
 
     .end local v16    # "r":Landroid/content/res/Resources;
     move-object/from16 v0, v16
 
     move-object/from16 v1, p7
 
-    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/MiuiResources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+    invoke-direct {v0, v4, v6, v5, v1}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
     .restart local v16    # "r":Landroid/content/res/Resources;
     monitor-enter p0

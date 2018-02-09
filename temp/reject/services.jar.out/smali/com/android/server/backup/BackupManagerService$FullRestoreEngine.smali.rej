@@ -1,0 +1,18 @@
+*** BackupManagerService$FullRestoreEngine.smali	2018-02-09 22:28:21.722213645 +0530
+--- BackupManagerService$FullRestoreEngine.smali	2018-02-09 22:17:59.264710772 +0530
+***************
+*** 739,745 ****
+  
+      iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mBytes:J
+  
+-     :cond_0
+      const/16 v18, 0x0
+  
+      move/from16 v0, v18
+--- 739,744 ----
+  
+      iput-wide v0, v2, Lcom/android/server/backup/BackupManagerService$FullRestoreEngine;->mBytes:J
+  
+      const/16 v18, 0x0
+  
+      move/from16 v0, v18
